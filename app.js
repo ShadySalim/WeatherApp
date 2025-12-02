@@ -6,7 +6,7 @@
 // CONSTANT
 
 const API_URL = 'https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}'
-const API_KEY = '0bbec6399ebf7cec2fc7731c94c095d9';
+const API_KEY = 'API_KEY ';
 const COUNTRY_NAMES = new Intl.DisplayNames(['en'],{type:'region'})
 // const SKY_CONDITIONS = {
 //   Clear: 'clear.png',
