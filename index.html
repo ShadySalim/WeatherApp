@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Weather App</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<main class="app">
+			<header class="app__header">
+				<h1 class="title">Weather</h1>
+				<p class="subtitle">Find city, check temperature, wind & humidity</p>
+			</header>
+
+			<section class="search">
+				<form id="search-form" class="search__form" autocomplete="off" aria-label="Search city weather">
+					<div class="search__input-wrap">
+						<img src="images/search.png" alt="" class="search__icon" aria-hidden="true" />
+						<input id="city-input" name="city" type="text" class="search__input" placeholder="Search city e.g. London" required />
+						<button class="search__btn" type="submit">Search</button>
+					</div>
+				</form>
+			</section>
+
+			<section class="weather" id="weather" aria-live="polite">
+				<div class="card card--glass">
+					<div class="weather__top">
+						<div class="weather__location">
+							<h2 id="city-name" class="city">—</h2>
+							<p id="country" class="country">—</p>
+						</div>
+						<div class="weather__condition">
+							<img id="condition-icon" src="" alt="Condition icon" class="condition__icon" />
+							<p id="condition-text" class="condition__text">Search a city to view weather</p>
+						</div>
+					</div>
+
+					<div class="weather__main">
+						<div class="temp">
+							<span id="temperature" class="temp__value"></span>
+							<span class="temp__unit">°C</span>
+						</div>
+					</div>
+
+					<div class="metrics">
+						<div class="metric">
+							<img src="images/wind.png" alt="Wind" class="metric__icon" />
+							<div class="metric__info">
+								<span class="metric__label">Wind</span>
+								<span id="wind" class="metric__value">— km/h</span>
+							</div>
+						</div>
+						<div class="metric">
+							<img src="images/humidity.png" alt="Humidity" class="metric__icon" />
+							<div class="metric__info">
+								<span class="metric__label">Humidity</span>
+								<span id="humidity" class="metric__value">—%</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<template id="card-skeleton">
+			<div class="skeleton">
+				<div class="skeleton__line skeleton__line--wide"></div>
+				<div class="skeleton__row">
+					<div class="skeleton__circle"></div>
+					<div class="skeleton__line"></div>
+				</div>
+			</div>
+		</template>
+
+		<script src="app.js"></script>
+	</body>
+	</html>
